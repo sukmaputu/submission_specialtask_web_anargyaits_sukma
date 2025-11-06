@@ -1,29 +1,36 @@
 <script setup>
-import api from './services/api.js'
 import { ref, onMounted } from 'vue'
+import api from './services/api.js'
+import { isLoading } from './store/loading'
+import AppLoading from './components/AppLoading.vue'
+import AppLayout from './Layouts/AppLayout.vue'
 
 const users = ref([])
 
 onMounted(async () => {
   try {
+    isLoading.value = true
     const response = await api.get('/users')
     users.value = response.data
     console.log(response.data)
   } catch (error) {
     console.error('Error fetching users:', error)
+  } finally {
+    setTimeout(() => {
+      isLoading.value = false
+    }, 500)
   }
 })
 </script>
 
 <template>
-  <div class="p-6">
-    <h1 class="text-2xl font-bold mb-4">Testing</h1>
-    <ul>
-      <li v-for="user in users" :key="user.id" class="mb-2">
-        {{ user.name }} ({{ user.email }})
-      </li>
-    </ul>
+  <div class="relative min-h-screen bg-black text-white">
+    <!-- Loading Overlay -->
+    <AppLoading v-if="isLoading" />
+
+    <!-- Layout utama -->
+    <AppLayout>
+      <router-view />
+    </AppLayout>
   </div>
 </template>
-
-<style scoped></style>

@@ -36,3 +36,63 @@ npm run dev
 ```sh
 npm run build
 ```
+# Submission Special Task Web - AnargyaiTS Sukma
+
+## Link GitHub Pages
+Live demo dari proyek ini dapat diakses di:  
+**[https://sukmaputu.github.io/submission_specialtask_web_anargyaits_sukma/](https://sukmaputu.github.io/submission_specialtask_web_anargyaits_sukma/)**
+
+---
+
+## Komponen File Ini
+- Frontend
+- Dist
+- Backend
+
+## Library
+- **AOS (Animate On Scroll)**: digunakan untuk animasi saat komponen muncul di layar
+
+---
+
+## Teknologi yang Digunakan
+- **Vue.js**: framework frontend utama  
+- **Tailwind CSS**: framework CSS untuk styling  
+- **Laravel**: backend hanya untuk koneksi, tidak digunakan langsung  
+- **Git**: version control
+
+---
+
+## Langkah Perilisan Hasil Proyek
+Untuk membangun dan merilis aplikasi ke GitHub Pages:  
+1. Jalankan `npm run build` untuk membangun aplikasi  
+2. Jalankan `npm run deploy` untuk mengupload hasil build ke GitHub Pages
+
+---
+
+## Loading
+- **loading.js**: script untuk menampilkan animasi loading saat halaman dimuat
+
+---
+
+## 3D Viewer
+3D model ditampilkan menggunakan platform **[Sketchfab](https://sketchfab.com/)**
+
+---
+
+## Komponen Vue
+- `AppNavbar.vue`  
+- `AppFooter.vue`  
+- `AppLoading.vue`  
+- `BacktoTop.vue`  
+- `FlipCard.vue`  
+- `AppCheckout.vue`  
+
+---
+
+## Komponen Navbar
+- `HomeView.vue`  
+- `TeamView.vue`  
+- `MemberView.vue`  
+- `AchievementView.vue`  
+- `CourseView.vue`  
+- `ShopView.vue`  
